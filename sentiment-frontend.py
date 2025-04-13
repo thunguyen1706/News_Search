@@ -79,7 +79,7 @@ def render_sentiment_indicator(sentiment: str, confidence: int):
     fig.update_layout(height=200, margin=dict(l=10, r=10, t=50, b=10))
     return fig
 
-def render_article_card(result: Dict[str, Any]):
+def render_article_card(result: Dict[str, Any], index: int = 0):
     with st.container():
         st.subheader(result["title"])
         
@@ -100,7 +100,7 @@ def render_article_card(result: Dict[str, Any]):
                 result["sentiment"], 
                 result["confidence"]
             )
-            st.plotly_chart(sentiment_fig, use_container_width=True)
+            st.plotly_chart(sentiment_fig, use_container_width=True, key=f"chart_{index}_{result['url'][-8:]}")
         
         st.markdown("---")
 
@@ -158,8 +158,8 @@ def main():
             col3.metric("Bearish Articles", bearish_count)
             
             # Render each article
-            for result in results:
-                render_article_card(result)
+            for i, result in enumerate(results):
+                render_article_card(result, i)
         else:
             st.info("No results found. Try a different topic.")
     else:
