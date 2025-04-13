@@ -111,10 +111,6 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-## 👥 Authors
-
-- [Thu Nguyen](https://github.com/thunguyen1706)
-
 ## 🙏 Acknowledgements
 
 - [Brave Search API](https://brave.com/search/api/) for providing news search capabilities
