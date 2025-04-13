@@ -6,8 +6,6 @@ A tool that analyzes financial news articles and determines their sentiment impa
 
 This application fetches the latest financial news articles based on user-defined topics, analyzes their content using Google's Gemini AI, and presents sentiment analysis results in an easy-to-understand format. It helps users quickly understand market sentiment without having to read through multiple news articles.
 
-![Sentiment Analysis Example](https://via.placeholder.com/800x400?text=Sentiment+Analysis+Dashboard)
-
 ## ✨ Features
 
 - **Search & Retrieve**: Fetch relevant financial news articles using the Brave Search API
